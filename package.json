@@ -1,0 +1,57 @@
+{
+  "name": "fump",
+  "version": "1.0.0",
+  "description": "Useful collection of functional composition helper functions",
+  "main": "dist/fump.js",
+  "browser": "dist/fump.min.js",
+  "jsnext:main": "dist/fump.es.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiaanduplessis/fump.git"
+  },
+  "homepage": "https://github.com/tiaanduplessis/fump",
+  "bugs": "https://github.com/tiaanduplessis/fump/issues",
+  "author": "Tiaan du Plessis <tiaanduplessis@hotmail.com>",
+  "scripts": {
+    "pretest": "npm run build; npm run lint",
+    "test": "jest",
+    "coverage": "npm test -- --coverage",
+    "lint": "standard --verbose",
+    "lint:fix": "standard --fix --verbose",
+    "precommit": "npm test",
+    "build": "bili --format es --format umd --compress",
+    "prepublish": "npm run build",
+    "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "functions",
+    "helpers",
+    "utilities",
+    "composition",
+    "curry",
+    "decoupled",
+    "map",
+    "flatMap",
+    "fump"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "bili": "^0.15.5",
+    "husky": "^0.13.3",
+    "jest-cli": "^20.0.4",
+    "standard": "^10.0.1"
+  },
+  "standard": {
+    "ignore": "dist"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
