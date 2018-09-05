@@ -53,6 +53,8 @@
 
 ## Install
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/fump.svg)](https://greenkeeper.io/)
+
 ```sh
 $ npm install fump
 # OR
